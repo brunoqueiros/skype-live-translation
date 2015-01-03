@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "file": "app.css",
+  "sources": [
+    "app.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAAA;EAeE,QAAQ;;;AAGV;EACE,OAAO;EACP,QAAQ;;;AAGV;EACE,YAAY;;;AAGd;EACE,YAAY;;;AAGd;EACE,eAAe;;;AAGjB;EACE,SAAS;;;AAGX;EACE,QAAQ;EACR,YAAY;EACZ,YAAY",
+  "names": [],
+  "sourceRoot": "../scss/"
+}

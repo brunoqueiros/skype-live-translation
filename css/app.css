@@ -1,0 +1,32 @@
+/* line 15, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+body {
+  height: auto; }
+
+/* line 19, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+.wrapper {
+  width: 1024px;
+  margin: 0 auto; }
+
+/* line 24, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+.text-center {
+  text-align: center; }
+
+/* line 28, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+.space-top {
+  margin-top: 1.538rem; }
+
+/* line 32, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+.space-bottom {
+  margin-bottom: 1.538rem; }
+
+/* line 36, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+.hide {
+  display: none; }
+
+/* line 40, /home/bruno/wonderland/web-speech-demo/scss/app.scss */
+.chat-room {
+  height: 350px;
+  max-height: 350px;
+  overflow-y: auto; }
+
+/*# sourceMappingURL=app.css.map */
