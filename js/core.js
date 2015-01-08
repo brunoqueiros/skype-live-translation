@@ -52,7 +52,11 @@
       $('#login-wrap').hide();
       $('#chat-room-wrap').show();
       
-      user = new User($('#name').val(), $('#language').val());
+      user = new User({
+        'new': true,
+        'name': $('#name').val(),
+        'language': $('#language').val()
+      });
       Recognition.init();
     }
     
@@ -66,9 +70,9 @@
    * @param {[[Type]]} translatedText [[Description]]
    * @param {[[Type]]} user           [[Description]]
    */
-  $(document).on('translate-finish', function (e, translatedText, user) {
+  $(document).on('translate-finish', function (e, translatedText, guest) {
     setNewMessage({
-      user: user,
+      user: guest,
       text: translatedText
     });
 
@@ -85,10 +89,14 @@
   });
   
   socket.on('chat message', function (response) {
-    if (user.itsMe(response.user.id)) {
+    var guest = new User(response.user),
+      myCountry = user.getCountry(),
+      guestCountry = guest.getCountry();
+
+    if (user.itsMe(response.user.id) || myCountry === guestCountry) {
       setNewMessage(response);
     } else {
-      Translate.getTranslation(response.text, user);
+      Translate.getTranslation(response.text, myCountry, guestCountry, guest);
     }
   });
 })(window, document);
