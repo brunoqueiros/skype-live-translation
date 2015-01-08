@@ -3,11 +3,11 @@
 
   window.Translate = {};
 
-  Translate.ws = 'http://api.mymemory.translated.net/get'; 
+  Translate.ws = 'http://api.mymemory.translated.net/get';
 
-  Translate.getTranslation = function (text, user) {
-    $.get(this.ws + '?q=' + text + '&langpair=pt|fr', function (response) {
-      $(document).trigger('translate-finish', [response.responseData.translatedText, user]);
+  Translate.getTranslation = function (text, myCountry, guestCountry, guest) {
+    $.get(this.ws + '?q=' + text + '&langpair=' + guestCountry + '|' + myCountry, function (response) {
+      $(document).trigger('translate-finish', [response.responseData.translatedText, guest]);
     });
   };
 })(window, document);
