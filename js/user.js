@@ -1,12 +1,22 @@
 //;(function (window, document, undefined) {
   'use strict';
   
-  function User(name, language) {
-    this.id = this.setID();
-    this.name = name;
-    this.language = language;
-    this.color = this.getColor();
+  function User(data) {
+    if (data.hasOwnProperty('new')) {
+      this.id = this.setID();
+      this.color = this.getColor();
+    }
+
+    this.extend(data);
   }
+
+  User.prototype.extend = function (data) {
+    var key;
+
+    for (key in data) {
+      this[key] = data[key];
+    }
+  };
   
   User.prototype.getName = function () {
     return this.name;
@@ -37,6 +47,10 @@
     randomIdx = Util.generateRandomNumber(0, colors.length);
     
     return colors[randomIdx];    
+  };
+
+  User.prototype.getCountry = function () {
+    return this.language.slice(0, 2);
   };
 
   User.prototype.itsMe = function (id) {
