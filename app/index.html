@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Speech Demo</title>
+	
+	<link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.min.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <section class="main wrapper" role="main">
+    <header class="header">
+      <h1 class="logo">Skype Clone Live Translation</h1>
+    </header>
+
+    <section class="content">
+      <div class="ui red message hide" id="js-alert">Fill out all fields</div>
+     
+      <section id="login-wrap">
+        <div class="ui form">
+          <div class="field">
+            <label for="language">Select your language</label>
+            <select name="language" id="language" required>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ui form space-top">
+          <div class="field">
+            <label for="name">What's your name?</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+        </div>
+      
+        <div class="text-center space-top">
+          <button id="js-btn-enter-chat" class="ui primary button">Enter chat</button>
+        </div>
+      </section>
+      
+      <section id="chat-room-wrap" class="hide chat-room ui raised segment">
+        <div class="chat-line-clone hide"> 
+          <span class="ui ribbon label">
+            <span class="chat-name">Guest</span> -
+            <span class="chat-time">17/12/2014 - 22:59</span>
+          </span>
+          <p class="chat-message">Pretty nice animals.</p>
+        </div>
+      </section>
+    </section>
+  </section>
+
+
+
+
+
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+
+
+  <script src="dist/bundle.js"></script>
+
+  <!--<script src="src/browser/synthesis.js"></script>
+  <script src="src/browser/translate.js"></script>
+  <script src="src/browser/recognition.js"></script>
+  <script src="src/js/util.js"></script>
+  <script src="src/browser/languages.js"></script>
+  <script src="src/common/user.js"></script>
+  <script src="src/js/core.js"></script>-->
+</body>
+</html>
