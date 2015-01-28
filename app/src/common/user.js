@@ -1,7 +1,7 @@
 ;(function (window, document, undefined) {
   'use strict';
 
-  var Util = require('../js/util');
+  var Util = require('../common/util');
   
   function User(data) {
     if (data.hasOwnProperty('new')) {
