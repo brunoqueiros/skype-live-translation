@@ -79,5 +79,5 @@
     $(document).trigger('recognition-finish', [text]);
   };
 
-  export default Recognition;
+  module.exports = Recognition;
 })(window, document);

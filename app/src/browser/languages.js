@@ -203,5 +203,5 @@
 
   Languages.setLanguagesHTML();
 
-  export default Languages;
+  module.exports = Languages;
 })(window, document);

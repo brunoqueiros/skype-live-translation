@@ -1,5 +1,7 @@
 ;(function (window, document, undefined) {
   'use strict';
+
+  var Util = require('../js/util');
   
   function User(data) {
     if (data.hasOwnProperty('new')) {
@@ -27,7 +29,7 @@
   };
   
   User.prototype.getID = function () {
-    return this.id;
+    return parseInt(this.id, 10);
   };
 
   User.prototype.setID = function () {
@@ -50,12 +52,12 @@
   };
 
   User.prototype.getCountry = function () {
-    return this.language.slice(0, 2);
+    return this.language.slice(-2);
   };
 
   User.prototype.itsMe = function (id) {
     return this.id === id;
   };
 
-  export default User;
+  module.exports = User;
 })();

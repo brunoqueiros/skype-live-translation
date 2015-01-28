@@ -22,5 +22,5 @@
     }
   };
 
-  export default Synthesis;
+  module.exports = Synthesis;
 })(window, document);

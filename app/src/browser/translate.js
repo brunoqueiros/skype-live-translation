@@ -11,5 +11,5 @@
     });
   };
 
-  export default Translate;
+  module.exports = Translate;
 })(window, document);

@@ -1,4 +1,4 @@
-;(function (window, document, undefined) {
+;(function () {
   'use strict';
   
   var Util = {};
@@ -11,5 +11,5 @@
     $(target).scrollTop($(target).height());
   };
 
-  export default Util;
-})(window, document);
+  module.exports = Util;
+})();
