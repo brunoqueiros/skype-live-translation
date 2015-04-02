@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('chai').assert
-  , Util = require('../app/src/common/util');
+  , Util = require('../dist/src/common/util');
 
 describe('Util', function () {
   describe('#generateRandomNumber()', function () {

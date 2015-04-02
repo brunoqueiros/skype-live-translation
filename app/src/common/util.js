@@ -1,15 +1,11 @@
-;(function () {
-  'use strict';
-  
-  var Util = {};
-  
-  Util.generateRandomNumber = function (min, max) {
+class Util {
+	generateRandomNumber(min, max) {
     return Math.ceil(Math.random() * (max - min) + min);
-  };
+  }
   
-  Util.updateScroll = function (target) {
+  updateScroll(target) {
     $(target).scrollTop($(target).height());
-  };
+  }
+}
 
-  module.exports = Util;
-})();
+export default new Util();

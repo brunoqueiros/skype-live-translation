@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('chai').assert
-  , User = require('../app/src/common/user');
+  , User = require('../dist/src/common/user');
 
 describe('User', function () {
   var u;

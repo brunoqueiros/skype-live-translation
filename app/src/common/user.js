@@ -1,9 +1,7 @@
-;(function (window, document, undefined) {
-  'use strict';
+import Util from './util';
 
-  var Util = require('../common/util');
-  
-  function User(data) {
+class User {
+  constructor(data) {
     if (data.hasOwnProperty('new')) {
       this.id = this.setID();
       this.color = this.getColor();
@@ -12,33 +10,33 @@
     this.extend(data);
   }
 
-  User.prototype.extend = function (data) {
+  extend(data) {
     var key;
 
     for (key in data) {
       this[key] = data[key];
     }
-  };
+  }
   
-  User.prototype.getName = function () {
+  getName() {
     return this.name;
-  };
+  }
   
-  User.prototype.getLanguage = function () {
+  getLanguage() {
     return this.language;
-  };
+  }
   
-  User.prototype.getID = function () {
+  getID() {
     return parseInt(this.id, 10);
-  };
+  }
 
-  User.prototype.setID = function () {
+  setID() {
     var date = new Date();
     
     return date.getTime();
   }
   
-  User.prototype.getColor = function () {
+  getColor() {
     var randomIdx,
         colors = [
           'yellow', 'green', 'blue',
@@ -49,15 +47,16 @@
     randomIdx = Util.generateRandomNumber(0, colors.length);
     
     return colors[randomIdx];    
-  };
+  }
 
-  User.prototype.getCountry = function () {
+  getCountry() {
     return this.language.slice(-2);
-  };
+  }
 
-  User.prototype.itsMe = function (id) {
+  itsMe(id) {
     return this.id === id;
-  };
+  }
+}
 
-  module.exports = User;
-})();
+
+export default User;
