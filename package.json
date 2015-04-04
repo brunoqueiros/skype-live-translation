@@ -2,6 +2,9 @@
   "name": "skype-clone-translation",
   "version": "0.0.1",
   "description": "A skype clone",
+  "scripts": {
+    "test": "gulp jscs && gulp babel && mocha"
+  },
   "dependencies": {
     "express": "^4.10.2",
     "socket.io": "^1.2.1"
@@ -15,6 +18,8 @@
     "gulp-babel": "^4.0.1",
     "gulp-browatchify": "0.0.0",
     "gulp-browserify": "^0.5.1",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.10.0",
     "gulp-mocha": "^2.0.1",
     "mocha": "^2.2.1",
     "vinyl-source-stream": "^1.1.0"
